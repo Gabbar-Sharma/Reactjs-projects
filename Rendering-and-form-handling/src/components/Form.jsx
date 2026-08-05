@@ -9,7 +9,7 @@ function Form() {
     }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <form className="bg-white p-6 rounded-lg shadow-md w-80">
+            <form onSubmit={submitData} className="bg-white p-6 rounded-lg shadow-md w-80">
                 <h2 className="text-2xl font-bold mb-5 text-center">
                     Sign Up
                 </h2>
@@ -45,7 +45,7 @@ function Form() {
                     />
                 </div>
                 <button
-                    type="button"
+                    type="submit"
                     className="w-full bg-blue-500 text-white py-2 rounded">
                     Submit
                 </button>
