@@ -8,8 +8,9 @@ function Form() {
         setState({...state, [name]: value});
     
     }
-    const submitDta = (e) => {
+    const submitData = (e) => {
         e.preventDefault()
+
 
 
     }
@@ -22,6 +23,7 @@ function Form() {
                 <div className="mb-4">
                     <label className="block mb-1">Name</label>
                     <input
+                        required
                         name="name"
                         type="text"
                         onChange={handleChange}
@@ -32,6 +34,7 @@ function Form() {
                 <div className="mb-4">
                     <label className="block mb-1">Email </label>
                     <input
+                        required
                         name="email"
                         type="email"
                         onChange={handleChange}
@@ -43,6 +46,7 @@ function Form() {
                 <div className="mb-5">
                     <label className="block mb-1">Password</label>
                     <input
+                        required
                         name="password"
                         type="password"
                         onChange={handleChange}
