@@ -6,6 +6,12 @@ function Form() {
     const handleChange = (e) => {
         let { name, value } = e.target;
         setState({...state, [name]: value});
+    
+    }
+    const submitDta = (e) => {
+        e.preventDefault()
+
+
     }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
