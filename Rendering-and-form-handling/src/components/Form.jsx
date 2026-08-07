@@ -1,18 +1,26 @@
 import React from 'react'
 import { useState } from 'react';
 function Form() {
-    const [state, setState] = useState({})
- console.log(state)
+    const [state, setState] = useState({
+        name: "",
+        email: "",
+        password: ""
+    })
+    console.log(state)
     const handleChange = (e) => {
         let { name, value } = e.target;
-        setState({...state, [name]: value});
-    
+        setState({ ...state, [name]: value });
+
     }
     const submitData = (e) => {
         e.preventDefault()
-
-
-
+        console.log(state)
+        setState({
+            name: "",
+            email: "",
+            password: "",
+        })
+      
     }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -23,6 +31,7 @@ function Form() {
                 <div className="mb-4">
                     <label className="block mb-1">Name</label>
                     <input
+                        value={state.name}
                         required
                         name="name"
                         type="text"
@@ -34,6 +43,7 @@ function Form() {
                 <div className="mb-4">
                     <label className="block mb-1">Email </label>
                     <input
+                        value={state.email}
                         required
                         name="email"
                         type="email"
@@ -46,6 +56,7 @@ function Form() {
                 <div className="mb-5">
                     <label className="block mb-1">Password</label>
                     <input
+                        value={state.password}
                         required
                         name="password"
                         type="password"
